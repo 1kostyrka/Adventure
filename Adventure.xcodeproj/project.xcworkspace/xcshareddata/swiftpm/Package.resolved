@@ -1,0 +1,33 @@
+{
+  "originHash" : "9ef4be9271d49bd753dae59deec60c990a50c2545a24ab0a4390f7537e3ae30b",
+  "pins" : [
+    {
+      "identity" : "flanimatedimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flipboard/FLAnimatedImage.git",
+      "state" : {
+        "revision" : "d4f07b6f164d53c1212c3e54d6460738b1981e9f",
+        "version" : "1.0.17"
+      }
+    },
+    {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios.git",
+      "state" : {
+        "revision" : "fe4c6fe3a0aa66cdeb51d549623c82ca9704b9a5",
+        "version" : "4.5.0"
+      }
+    },
+    {
+      "identity" : "swiftalertview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dinhquan/SwiftAlertView.git",
+      "state" : {
+        "revision" : "601c049861691ea3578e3812d1e9cd548cf46f48",
+        "version" : "2.2.1"
+      }
+    }
+  ],
+  "version" : 3
+}

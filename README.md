@@ -2,6 +2,12 @@
 
 **Adventure** is an advent calendar app where users can complete Christmas-themed tasks. Each day leading up to Christmas, a new task is unlocked, creating a festive atmosphere and helping users enjoy the holiday season.
 
+##Screenshots
+
+![Main Screen](screenshots/adventure:main.png)
+![Completed tasks Screen](screenshots/adventure:completed.png)
+![Task Screen](screenshots/adventure:task.png)
+
 ## Main Features
 
 - **Mark Tasks as Completed**: Mark each task as done once completed.

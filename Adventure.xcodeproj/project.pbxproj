@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7E06C0302CD7F5E50081E950 /* SwiftAlertView in Frameworks */ = {isa = PBXBuildFile; productRef = 7E06C02F2CD7F5E50081E950 /* SwiftAlertView */; };
+		7E06C0422CDA525D0081E950 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7E06C0412CDA525D0081E950 /* Lottie */; };
+		7E5F2CAB2CD525370000B19A /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7E5F2CAA2CD525370000B19A /* FLAnimatedImage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7E5F2C882CD504370000B19A /* Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E06C0302CD7F5E50081E950 /* SwiftAlertView in Frameworks */,
+				7E5F2CAB2CD525370000B19A /* FLAnimatedImage in Frameworks */,
+				7E06C0422CDA525D0081E950 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,9 @@
 			);
 			name = Adventure;
 			packageProductDependencies = (
+				7E5F2CAA2CD525370000B19A /* FLAnimatedImage */,
+				7E06C02F2CD7F5E50081E950 /* SwiftAlertView */,
+				7E06C0412CDA525D0081E950 /* Lottie */,
 			);
 			productName = Adventure;
 			productReference = 7E5F2C882CD504370000B19A /* Adventure.app */;
@@ -107,6 +119,11 @@
 			);
 			mainGroup = 7E5F2C7F2CD504370000B19A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7E5F2CA92CD525370000B19A /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+				7E06C02E2CD7F5E50081E950 /* XCRemoteSwiftPackageReference "SwiftAlertView" */,
+				7E06C0402CDA525D0081E950 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7E5F2C892CD504370000B19A /* Products */;
 			projectDirPath = "";
@@ -157,12 +174,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kostyrka.Adventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -185,12 +206,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kostyrka.Adventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -335,6 +360,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E06C02E2CD7F5E50081E950 /* XCRemoteSwiftPackageReference "SwiftAlertView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dinhquan/SwiftAlertView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.1;
+			};
+		};
+		7E06C0402CDA525D0081E950 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+		7E5F2CA92CD525370000B19A /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.17;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E06C02F2CD7F5E50081E950 /* SwiftAlertView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E06C02E2CD7F5E50081E950 /* XCRemoteSwiftPackageReference "SwiftAlertView" */;
+			productName = SwiftAlertView;
+		};
+		7E06C0412CDA525D0081E950 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E06C0402CDA525D0081E950 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		7E5F2CAA2CD525370000B19A /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E5F2CA92CD525370000B19A /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7E5F2C802CD504370000B19A /* Project object */;
 }

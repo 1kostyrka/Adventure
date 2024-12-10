@@ -26,4 +26,16 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         let width = totalWidth / 5
         return CGSize(width: width, height: width)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let controller = storyboard.instantiateViewController(withIdentifier: String(describing: DashboardSelectionViewController.self)) as? DashboardSelectionViewController {
+            
+            controller.modalPresentationStyle = .fullScreen
+            let task = TaskService.shared.tasks[indexPath.item]
+            controller.task = task
+            
+            self.present(controller, animated: true)
+        }
+    }
 }

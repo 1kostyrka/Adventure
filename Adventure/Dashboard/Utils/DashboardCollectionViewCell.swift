@@ -23,9 +23,6 @@ class DashboardCollectionViewCell: UICollectionViewCell {
     func set(image: String) {
         if let image = UIImage(named: image) {
             dayImageView.image = image
-        } else {
-            // Optionally set a placeholder image if the image is not found
-            dayImageView.image = UIImage(named: "placeholder") // Make sure to add a placeholder image in your assets
         }
     }
 }

@@ -13,7 +13,7 @@ class DashboardSelectionViewController: UIViewController {
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
     var task: TasksStorage?
@@ -41,20 +41,25 @@ class DashboardSelectionViewController: UIViewController {
         }
         
         let largeConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .regular, scale: .default)
-        backButton.setImage(UIImage(systemName: "chevron.backward.circle", withConfiguration: largeConfig), for: .normal)
+        dismissButton.setImage(UIImage(systemName: "xmark", withConfiguration: largeConfig), for: .normal)
     }
     
-    @IBAction func didTapBackButton(_ sender: UIButton) {
+    @IBAction func didTapDismissButton(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
     
     @IBAction func didTapDoneButton(_ sender: UIButton) {
-        let newButtonText = "You already completed this quest"
-        doneButton.setTitle(newButtonText, for: .normal)
+        guard let task = task else { return }
         
-        if let task = task {
-            TaskService.shared.buttonTexts[task.day] = newButtonText
+        if TaskService.shared.completedTasks.contains(where: { $0.day == task.day }) {
+            doneButton.setTitle("You already completed this quest", for: .normal)
+            return
         }
+        
+        doneButton.setTitle("You already completed this quest", for: .normal)
+        TaskService.shared.completedTasks.append(task)
+        
+        TaskService.shared.buttonTexts[task.day] = "You already completed this quest"
         
         let alert = SwiftAlertView(title: "Done", message: "Adventure quest completed!", buttonTitles: ["Continue the adventure"])
         alert.buttonHeight = 50
@@ -66,9 +71,7 @@ class DashboardSelectionViewController: UIViewController {
         alert.show()
         
         alert.onButtonClicked { [weak self] alertView, buttonIndex in
-            guard let self = self, let task = self.task else { return }
-            TaskService.shared.completedTasks.append(task)
-            self.dismiss(animated: true)
+            self?.dismiss(animated: true)
         }
     }
 }

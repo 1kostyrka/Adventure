@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "Знімок екрана 2024-11-01 о 15.11.48.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}
